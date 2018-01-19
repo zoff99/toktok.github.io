@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>The TokTok Project - Changelog for c-toxcore</title>
+  <meta name="description" content="## v0.1.9### Merged PRs:- [#563](https://github.com/TokTok/c-toxcore/pull/563) Release v0.1.9- [#561](https://github.com/TokTok/c-toxcore/pull/561) Remove un...">
+  <link rel="canonical" href="https://toktok.ltd/changelog/c-toxcore.html">
+
+  
+  
+  <link rel="stylesheet" href="../static/css/main.css" media="screen">
+
+  
+</head>
+
+  <body>
+    <nav id="sidemenu">
+  <div class="nav-title">Navigation</div>
+  <ul class="nav tree">
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+      <li>
+        <a href="../index.html">Home</a>
+      </li>
+      
+    
+      
+      <li>
+        <a href="../mission.html">Mission</a>
+      </li>
+      
+    
+      
+      <li>
+        <a href="../roadmap.html">Roadmap</a>
+      </li>
+      
+    
+      
+      <li>
+        <a href="../changelog.html">Changelogs</a>
+      </li>
+      
+    
+      
+      <li>
+        <a href="../get-started.html">Get started</a>
+      </li>
+      
+    
+      
+      <li>
+        <a href="../pulls.html">Pull Requests</a>
+      </li>
+      
+    
+      
+      <li>
+        <a href="../spec.html">Tox specification</a>
+      </li>
+      
+    
+      
+      <li>
+        <a href="../development.html">Development process</a>
+      </li>
+      
+    
+      
+      <li>
+        <a href="../designs.html">Design documents</a>
+      </li>
+      
+    
+      
+      <li>
+        <a href="../reviews.html">How to: community review</a>
+      </li>
+      
+    
+      
+      <li>
+        <a href="../repos.html">Repositories</a>
+      </li>
+      
+    
+      
+      <li>
+        <a href="../integrations.html">Integrations</a>
+      </li>
+      
+    
+  </ul>
+</nav>
+
+    <div id="content">
+      <h1 class="title">Changelog for c-toxcore</h1>
+      <main>
+        <h3 id="v019">v0.1.9</h3>
+
+<h4 id="merged-prs">Merged PRs:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/563">#563</a> Release v0.1.9</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/561">#561</a> Remove unused variable</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/560">#560</a> Fix non-portable zeroing out of doubles</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/559">#559</a> Fix theoretical memory leaks</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/557">#557</a> Document inverted mutex lock/unlock.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/556">#556</a> Build tests on appveyor, the MSVC build, but don’t run them yet.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/555">#555</a> Fold hstox tests into the general linux test.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/554">#554</a> Add a monolith_test that includes all toxcore sources.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/553">#553</a> Factor out strict_abi cmake code into a separate module.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/552">#552</a> Fix formatting and spelling in version-sync script.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/551">#551</a> Forbid undefined symbols in shared libraries.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/546">#546</a> Make variable names in file saving test less cryptic</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/539">#539</a> Make OSX test failures fail the Travis CI build.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/537">#537</a> Fix TokTok/c-toxcore#535</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/534">#534</a> Fix markdown formatting</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/530">#530</a> Implement missing TES constant functions.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/511">#511</a> Save bandwidth by avoiding superfluous Nodes Requests to peers already on the Close List</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/506">#506</a> Add test case for title change</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/498">#498</a> DHT refactoring</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/487">#487</a> Split daemon’s logging backends in separate modules</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/468">#468</a> Test for memberlist not changing after changing own name</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/449">#449</a> Use new encoding of <code class="highlighter-rouge">Maybe</code> in msgpack results.</li>
+</ul>
+
+<h4 id="closed-issues">Closed issues:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/482">#482</a> CMake can’t detect and compile ToxAV on OSX</li>
+</ul>
+
+<h3 id="v018">v0.1.8</h3>
+
+<h4 id="merged-prs-1">Merged PRs:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/538">#538</a> Reverting tox_loop PR changes</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/536">#536</a> Release v0.1.8</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/526">#526</a> Add TOX_NOSPAM_SIZE to the public API.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/525">#525</a> Retry autotools tests the same way as cmake tests.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/524">#524</a> Reduce ctest timeout to 2 minutes from 5 minutes.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/512">#512</a> Add test for DHT pack_nodes and unpack_nodes</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/504">#504</a> CMake: install bootstrapd if it is built</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/488">#488</a> Save compiled Android artifacts after CircleCI builds.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/473">#473</a> Added missing includes: &lt;netinet/in.h&gt; and &lt;sys/socket.h&gt;</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/335">#335</a> Implement tox_loop</li>
+</ul>
+
+<h4 id="closed-issues-1">Closed issues:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/535">#535</a> OS X tests failing</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/503">#503</a> Undefined functions: tox_pass_salt_length, tox_pass_key_length, tox_pass_encryption_extra_length</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/456">#456</a> Tox.h doesn’t expose the size of the nospam.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/411">#411</a> Reduce CTest timeout to 2 minutes</li>
+</ul>
+
+<h3 id="v017">v0.1.7</h3>
+
+<h4 id="merged-prs-2">Merged PRs:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/523">#523</a> Release v0.1.7</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/521">#521</a> Fix appveyor script: install curl from chocolatey.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/510">#510</a> Fix list malloc(0) bug</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/509">#509</a> Fix network malloc(0) bug</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/497">#497</a> Fix network</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/496">#496</a> Fix Travis always succeeding despite tests failing</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/491">#491</a> Add crypto_memzero for temp buffer</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/490">#490</a> Move c_sleep to helpers.h and misc_tools.h</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/486">#486</a> Remove empty line in Messenger.c</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/483">#483</a> Make BUILD_TOXAV an option and fail if dependencies are missing</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/481">#481</a> Remove dependency on strings.h</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/480">#480</a> Use VLA macro</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/479">#479</a> Fix pthreads in AppVeyor build</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/471">#471</a> Remove statics used in onion comparison functions.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/461">#461</a> Replace part of network functions on platform-independent implementation</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/452">#452</a> Add VLA compatibility macro for C89-ish compilers.</li>
+</ul>
+
+<h4 id="closed-issues-2">Closed issues:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/474">#474</a> TOX_VERSION_PATCH isn’t in sync with the version</li>
+</ul>
+
+<h3 id="v016">v0.1.6</h3>
+
+<h4 id="merged-prs-3">Merged PRs:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/460">#460</a> Release v0.1.6.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/459">#459</a> Add Android build to CI.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/454">#454</a> Add appveyor build for native windows tests.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/448">#448</a> Only retry failed tests on Circle CI instead of all.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/434">#434</a> Replace redundant packet type check in handler with assert.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/432">#432</a> Remove some static variables</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/385">#385</a> Add platform-independent Socket and IP implementation</li>
+</ul>
+
+<h4 id="closed-issues-3">Closed issues:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/415">#415</a> Set up a native windows build on appveyor</li>
+</ul>
+
+<h3 id="v015">v0.1.5</h3>
+
+<h4 id="merged-prs-4">Merged PRs:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/447">#447</a> Release v0.1.5.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/446">#446</a> Limit number of retries to 3.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/445">#445</a> Make Travis tests slightly more robust by re-running them.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/443">#443</a> Make building <code class="highlighter-rouge">DHT_bootstrap</code> in cmake optional.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/433">#433</a> Add tutorial and “danger: experimental” banner to README.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/431">#431</a> Update license headers and remove redundant file name comment.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/424">#424</a> Fixed the FreeBSD build failure due to the undefined MSG_NOSIGNAL.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/420">#420</a> Setup autotools to read .so version info from a separate file</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/418">#418</a> Clarify how the autotools build is done on Travis.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/414">#414</a> Explicitly check if compiler supports C99</li>
+</ul>
+
+<h3 id="v014">v0.1.4</h3>
+
+<h4 id="merged-prs-5">Merged PRs:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/422">#422</a> Release v0.1.4.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/410">#410</a> Fix NaCl build: tar was called incorrectly.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/409">#409</a> Clarify that the pass key <code class="highlighter-rouge">new</code> function can fail.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/407">#407</a> Don’t use <code class="highlighter-rouge">git.depth=1</code> anymore.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/404">#404</a> Issue 404: semicolon not found</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/403">#403</a> Warn on -pedantic, don’t error yet.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/401">#401</a> Add logging callback to messenger_test.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/400">#400</a> Run windows tests but ignore their failures.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/398">#398</a> Portability Fixes</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/397">#397</a> Replace make_quick_sort with qsort</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/396">#396</a> Add an OSX build that doesn’t run tests.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/394">#394</a> CMake: Add soversion to library files to generate proper symlinks</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/393">#393</a> Set up autotools build to build against vanilla NaCl.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/392">#392</a> Check that TCP connections aren’t dropped in callbacks.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/391">#391</a> Minor simplification in <code class="highlighter-rouge">file_seek</code> code.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/390">#390</a> Always kill invalid file transfers when receiving file controls.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/388">#388</a> Fix logging condition for IPv6 client timestamp updates.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/387">#387</a> Eliminate dead return statement.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/386">#386</a> Avoid accessing uninitialised memory in <code class="highlighter-rouge">net_crypto</code>.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/381">#381</a> Remove <code class="highlighter-rouge">TOX_DEBUG</code> and have asserts always enabled.</li>
+</ul>
+
+<h4 id="closed-issues-4">Closed issues:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/378">#378</a> Replace all uses of <code class="highlighter-rouge">make_quick_sort</code> with <code class="highlighter-rouge">qsort</code></li>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/364">#364</a> Delete misc_tools.h after replacing its use by qsort.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/363">#363</a> Test against NaCl in addition to libsodium on Travis.</li>
+</ul>
+
+<h3 id="v013">v0.1.3</h3>
+
+<h4 id="merged-prs-6">Merged PRs:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/395">#395</a> Revert “Portability fixes”</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/380">#380</a> Test a few cmake option combinations before the build.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/377">#377</a> Fix SSL verification in coveralls.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/376">#376</a> Bring back autotools instructions</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/373">#373</a> Only fetch 1 revision from git during Travis builds.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/369">#369</a> Integrate with CircleCI to build artifacts in the future</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/366">#366</a> Release v0.1.3.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/362">#362</a> Remove .cabal-sandbox option from tox-spectest find line.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/361">#361</a> Simplify integration as a third-party lib in cmake projects</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/354">#354</a> Add secure memcmp and memzero implementation.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/324">#324</a> Do not compile and install DHT_bootstrap if it was disabled in configure</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/297">#297</a> Portability fixes</li>
+</ul>
+
+<h4 id="closed-issues-5">Closed issues:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/347">#347</a> Implement our own secure <code class="highlighter-rouge">memcmp</code> and <code class="highlighter-rouge">memzero</code> if libsodium isn’t available</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/319">#319</a> toxcore installs <code class="highlighter-rouge">DHT_bootstrap</code> even though <code class="highlighter-rouge">--disable-daemon</code> is passed to <code class="highlighter-rouge">./configure</code></li>
+</ul>
+
+<h3 id="v012">v0.1.2</h3>
+
+<h4 id="merged-prs-7">Merged PRs:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/355">#355</a> Release v0.1.2</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/353">#353</a> Fix toxav use after free caused by premature MSI destruction</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/346">#346</a> Avoid array out of bounds read in friend saving.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/344">#344</a> Remove unused get/set salt/key functions from toxencryptsave.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/343">#343</a> Wrap all sodium/nacl functions in crypto_core.c.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/341">#341</a> Add test to check if tox_new/tox_kill leaks.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/336">#336</a> Correct TES docs to reflect how many bytes functions actually require.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/333">#333</a> Use <code class="highlighter-rouge">tox_options_set_*</code> instead of direct member access.</li>
+</ul>
+
+<h4 id="closed-issues-6">Closed issues:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/345">#345</a> Array out of bounds read in “save” function</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/342">#342</a> Wrap all libsodium functions we use in toxcore in <code class="highlighter-rouge">crypto_core</code>.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/278">#278</a> ToxAV use-after-free bug</li>
+</ul>
+
+<h3 id="v0111">v0.1.11</h3>
+
+<h4 id="merged-prs-8">Merged PRs:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/643">#643</a> Add .editorconfig</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/638">#638</a> Release v0.1.11</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/637">#637</a> Update tox-bootstrapd Dockerfile</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/635">#635</a> Separate FreeBSD Travis build in 2 stages</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/632">#632</a> Lift libconfig to v1.7.1</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/631">#631</a> Add aspcud for Opam</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/630">#630</a> Fix for Travis fail on addr_resolve testing</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/623">#623</a> Split video payload into multiple RTP messages when too big to fit into one</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/615">#615</a> forget DHT pubkey of offline friend after DHT timeout</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/611">#611</a> Fix typo</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/607">#607</a> set onion pingid timeout to announce timeout (300s)</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/592">#592</a> Adjust docs of few toxencrypt function to the code</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/587">#587</a> Fix tox test</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/586">#586</a> Improve LAN discovery</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/576">#576</a> Replace include(CTest) on enable_testing()</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/574">#574</a> Reset hole-punching parameters after not punching for a while</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/571">#571</a> Configure needs to find libsodium headers.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/515">#515</a> Network cleanup: reduce dependency on system-defined constants</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/505">#505</a> Add FreeBSD Travis</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/500">#500</a> Fixed the bug when receipts for messages sent from the receipt callback never arrived.</li>
+</ul>
+
+<h4 id="closed-issues-7">Closed issues:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/493">#493</a> Receipts for messages sent from the receipt callback never arrive</li>
+</ul>
+
+<h3 id="v0110">v0.1.10</h3>
+
+<h4 id="merged-prs-9">Merged PRs:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/575">#575</a> Release v0.1.10</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/564">#564</a> Fix Windows build</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/542">#542</a> Save bandwidth by moderating onion pinging</li>
+</ul>
+
+<h3 id="v011">v0.1.1</h3>
+
+<h4 id="merged-prs-10">Merged PRs:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/337">#337</a> Release v0.1.1</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/332">#332</a> Add test for encrypted savedata.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/330">#330</a> Strengthen the note about ABI compatibility in tox.h.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/328">#328</a> Drop the broken <code class="highlighter-rouge">TOX_VERSION_REQUIRE</code> macro.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/326">#326</a> Fix unresolved reference in toxencryptsave API docs.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/309">#309</a> Fixed attempt to join detached threads (fixes toxav test crash)</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/306">#306</a> Add option to disable local peer discovery</li>
+</ul>
+
+<h4 id="closed-issues-8">Closed issues:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/327">#327</a> The <code class="highlighter-rouge">TOX_VERSION_REQUIRE</code> macro is broken.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/221">#221</a> Option to disable local peer detection</li>
+</ul>
+
+<h3 id="v010">v0.1.0</h3>
+
+<h4 id="merged-prs-11">Merged PRs:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/325">#325</a> Fix Libs line in toxcore.pc pkg-config file.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/322">#322</a> Add compatibility pkg-config modules: libtoxcore, libtoxav.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/318">#318</a> Fix <code class="highlighter-rouge">--enable-logging</code> flag in autotools configure script.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/316">#316</a> Release 0.1.0.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/315">#315</a> Fix version compatibility test.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/314">#314</a> Fix off by one error in saving our own status message.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/313">#313</a> Fix padding being in the wrong place in <code class="highlighter-rouge">SAVED_FRIEND</code> struct</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/312">#312</a> Conditionally enable non-portable assert on LP64.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/310">#310</a> Add apidsl file for toxencryptsave.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/307">#307</a> Clarify toxencryptsave documentation regarding buffer sizes</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/305">#305</a> Fix static builds</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/303">#303</a> Don’t build nTox by default.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/301">#301</a> Renamed messenger functions, prepend <code class="highlighter-rouge">m_</code>.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/299">#299</a> net_crypto give handle_data_packet_helper a better name</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/294">#294</a> Don’t error on warnings by default</li>
+</ul>
+
+<h4 id="closed-issues-9">Closed issues:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/317">#317</a> toxcore fails to build with autotools and debugging level enabled</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/311">#311</a> Incorrect padding</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/308">#308</a> Review TES and port it to APIDSL</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/293">#293</a> error building on ubuntu 14.04</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/292">#292</a> Don’t build nTox by default with CMake</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/290">#290</a> User Feed</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/266">#266</a> Support all levels listed in TOX_DHT_NAT_LEVEL</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/216">#216</a> When v0.1 release?</li>
+</ul>
+
+<h3 id="v005">v0.0.5</h3>
+
+<h4 id="merged-prs-12">Merged PRs:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/289">#289</a> Version Patch v0.0.4 =&gt; v0.0.5</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/287">#287</a> Add CMake knobs to suppress building tests</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/286">#286</a> Support float32 and float64 in msgpack type printer.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/285">#285</a> Mark <code class="highlighter-rouge">Tox_Options</code> struct as deprecated.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/284">#284</a> Add NONE enumerator to bit mask.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/281">#281</a> Made save format platform-independent</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/277">#277</a> Fix a memory leak in hstox interface</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/276">#276</a> Fix NULL pointer dereference in log calls</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/275">#275</a> Fix a memory leak in GroupAV</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/274">#274</a> Options in <code class="highlighter-rouge">new_messenger()</code> must never be null.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/271">#271</a> Convert to and from network byte order in set/get nospam.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/262">#262</a> Add ability to disable UDP hole punching</li>
+</ul>
+
+<h4 id="closed-issues-10">Closed issues:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/254">#254</a> Add option to disable UDP hole punching</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/215">#215</a> The current tox save format is non-portable</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/205">#205</a> nospam value is reversed in array returned by <code class="highlighter-rouge">tox_self_get_address()</code></li>
+</ul>
+
+<h3 id="v004">v0.0.4</h3>
+
+<h4 id="merged-prs-13">Merged PRs:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/272">#272</a> v0.0.4</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/265">#265</a> Disable -Wunused-but-set-variable compiler warning flag.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/261">#261</a> Work around Travis issue that causes build failures.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/260">#260</a> Support arbitrary video resolutions in av_test</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/257">#257</a> Add decode/encode PlainText test support.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/256">#256</a> Add spectest to the cmake test suite.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/255">#255</a> Disable some gcc-specific warnings.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/249">#249</a> Use apidsl for the crypto_core API.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/248">#248</a> Remove new_nonce function in favour of random_nonce.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/224">#224</a> Add DHT_create_packet, an abstraction for DHT RPC packets</li>
+</ul>
+
+<h3 id="v003">v0.0.3</h3>
+
+<h4 id="merged-prs-14">Merged PRs:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/251">#251</a> Rename log levels to remove the extra “LOG” prefix.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/250">#250</a> Release v0.0.3.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/245">#245</a> Change packet kind enum to use hex constants.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/243">#243</a> Enable address sanitizer on the cmake build.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/242">#242</a> Remove assoc</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/241">#241</a> Move log callback to options.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/233">#233</a> Enable all possible C compiler warning flags.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/230">#230</a> Move packing and unpacking DHT request packets to DHT module.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/228">#228</a> Remove unimplemented “time delta” parameter.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/227">#227</a> Compile as C++ for windows builds.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/223">#223</a> TravisCI shorten IRC message</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/220">#220</a> toxav renaming: group.{h,c} -&gt; groupav.{h,c}</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/218">#218</a> Rename some internal “group chat” thing to “conference”.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/212">#212</a> Convert series of <code class="highlighter-rouge">NET_PACKET_*</code> defines into a typedef enum</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/196">#196</a> Update readme, moved the roadmap to a higher position</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/193">#193</a> Remove duplicate tests: split tests part 2.</li>
+</ul>
+
+<h4 id="closed-issues-11">Closed issues:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/40">#40</a> Stateless callbacks in toxcore’s public API</li>
+</ul>
+
+<h3 id="v002">v0.0.2</h3>
+
+<h4 id="merged-prs-15">Merged PRs:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/207">#207</a> docs: correct instructions for cloning &amp; harden agains repo name changes</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/206">#206</a> Corrected libsodium tag</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/204">#204</a> Error if format_test can’t be executed.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/202">#202</a> Version Patch v0.0.2</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/190">#190</a> Install libraries with RPATH.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/189">#189</a> Use <code class="highlighter-rouge">socklen_t</code> instead of <code class="highlighter-rouge">unsigned int</code> in call to <code class="highlighter-rouge">accept</code>.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/188">#188</a> Add option to set test timeout</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/187">#187</a> Add option to build tox-bootstrapd</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/185">#185</a> Import the hstox SUT interface from hstox.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/183">#183</a> Set log level for DEBUG=ON to LOG_DEBUG.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/182">#182</a> Remove return after no-return situation.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/181">#181</a> Minor documentation fixes.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/180">#180</a> Add the ‘Tox’ context object to the logger.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/179">#179</a> Remove the <code class="highlighter-rouge">_test</code> suffix in <code class="highlighter-rouge">auto_test</code> calls.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/178">#178</a> Rebuild apidsl’d headers in cmake.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/177">#177</a> docs(INSTALL): update compiling instructions for Linux</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/176">#176</a> Merge irungentoo/toxcore into TokTok/c-toxcore.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/173">#173</a> Duplicate tox_test to 4 other files.</li>
+</ul>
+
+<h4 id="closed-issues-12">Closed issues:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/201">#201</a> Logging callback was broken</li>
+</ul>
+
+<h3 id="v001">v0.0.1</h3>
+
+<h4 id="merged-prs-16">Merged PRs:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/174">#174</a> Remove redundant callback objects.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/171">#171</a> Simple Version tick to v0.0.1</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/170">#170</a> C++ the second round.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/166">#166</a> Add version-sync script.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/164">#164</a> Replace <code class="highlighter-rouge">void*</code> with <code class="highlighter-rouge">RingBuffer*</code> to avoid conversions.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/163">#163</a> Move ring buffer out of toxcore/util into toxav.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/162">#162</a> Allow the OSX build to fail on travis.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/161">#161</a> Minor cleanups: unused vars, unreachable code, static globals.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/160">#160</a> Work around bug in opencv3 headers.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/157">#157</a> Make TCP_Connections module-private.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/156">#156</a> Make TCP_Server opaque.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/153">#153</a> Fix strict-ld grep expressions to include digits.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/151">#151</a> Revert #130 “Make ToxAV stateless”</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/148">#148</a> Added UB comment r/t deleting a friend w/ active call</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/146">#146</a> Make group callbacks stateless</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/145">#145</a> Make internal chat list function take uint32_t* as well.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/144">#144</a> Only build toxav if opus and vpx are found.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/143">#143</a> Make toxcore code C++ compatible.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/142">#142</a> Fix for windows dynamic libraries.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/141">#141</a> const-correctness in windows code.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/140">#140</a> Use C99 %zu format conversion in printf for size_t.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/139">#139</a> Clean up Travis build a bit in preparation for osx/win.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/138">#138</a> Remove format-source from travis script.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/135">#135</a> Convert old groupchats to new API format</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/134">#134</a> Add some astyle options to make it do more.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/133">#133</a> Ensure that all TODOs have an owner.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/132">#132</a> Remove <code class="highlighter-rouge">else</code> directly after <code class="highlighter-rouge">return</code>.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/130">#130</a> Make ToxAV stateless</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/129">#129</a> Use TokTok’s apidsl instead of the iphydf one.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/127">#127</a> Use “phase” script for travis build phases.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/126">#126</a> Add option to build static libraries.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/125">#125</a> Group #include directives in 3-4 groups.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/123">#123</a> Use correct logical operator for tox_test</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/120">#120</a> make the majority of the callbacks stateless and add some status to a testcase</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/118">#118</a> Use <code class="highlighter-rouge">const</code> for version numbers.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/117">#117</a> Add STRICT_ABI cmake flag to generate export lists.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/116">#116</a> Fix potential null pointer dereference.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/115">#115</a> Fix memory leak on error paths in tox_new.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/114">#114</a> Fix compilation for Windows.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/111">#111</a> Add debugging option to autotools configuration</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/110">#110</a> Comment intentional switch fallthroughs</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/109">#109</a> Separate ip_port packing from pack_nodes() and unpack_nodes()</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/108">#108</a> Prevent <code class="highlighter-rouge">&lt;winsock.h&gt;</code> inclusion by <code class="highlighter-rouge">&lt;windows.h&gt;</code>.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/107">#107</a> Print a message about missing astyle in format-source.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/104">#104</a> Merge with irungentoo/master</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/103">#103</a> Allocate <code class="highlighter-rouge">sizeof(IP_ADAPTER_INFO)</code> bytes instead of <code class="highlighter-rouge">sizeof(T*)</code>.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/101">#101</a> Add TODO for @mannol.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/100">#100</a> Remove the packet mutation in toxav’s bwcontroller.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/99">#99</a> Make packet data a ptr-to-const.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/97">#97</a> Improve static and const correctness.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/96">#96</a> Improve C standard compliance.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/94">#94</a> Rearrange fields to decrease size of structure</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/84">#84</a> Remove useless casts.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/82">#82</a> Add missing #include <pthread.h> to av_test.c.</pthread.h></li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/81">#81</a> Match parameter names in declarations with their definitions.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/80">#80</a> Sort #includes in all source files.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/79">#79</a> Remove redundant <code class="highlighter-rouge">return</code> statements.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/78">#78</a> Do not use <code class="highlighter-rouge">else</code> after <code class="highlighter-rouge">return</code>.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/77">#77</a> Add OSX and Windows build to travis config.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/76">#76</a> Remove unused and bit-rotten friends_test.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/75">#75</a> Enable build of av_test.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/74">#74</a> Add missing #includes to headers and rename tox_old to tox_group.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/73">#73</a> Add braces to all if statements.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/72">#72</a> Add getters/setters for options.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/70">#70</a> Expose constants as functions.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/68">#68</a> Add address sanitizer option to cmake file.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/66">#66</a> Fix plane size calculation in test</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/65">#65</a> Avoid large stack allocations on thread stacks.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/64">#64</a> Comment out useless TODO’d if block.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/63">#63</a> Initialise the id in assoc_test.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/62">#62</a> Reduce the timeout on travis to something much more reasonable</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/60">#60</a> Make friend requests stateless</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/59">#59</a> Replace uint with unsigned int in assoc.c.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/58">#58</a> Make Message received receipts stateless</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/57">#57</a> Make Friend User Status stateless</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/55">#55</a> docs(INSTALL.md): update instructions for Gentoo</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/54">#54</a> Make typing change callback stateless</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/53">#53</a> Add format-source script.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/52">#52</a> Build assoc DHT code on travis.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/51">#51</a> Fix operation sequencing in TCP_test.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/49">#49</a> Apidsl test</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/48">#48</a> Make friend message callback stateless</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/46">#46</a> Move logging to a callback.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/45">#45</a> Stateless friend status message</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/43">#43</a> Allow NULL as argument to tox_kill.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/41">#41</a> Fix warnings</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/39">#39</a> Merge irungentoo/toxcore into TokTok/c-toxcore.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/38">#38</a> Try searching for libsodium with pkg-config in ./configure.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/37">#37</a> Add missing DHT_bootstrap to CMakeLists.txt.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/36">#36</a> Make tox_callback_friend_name stateless.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/33">#33</a> Update readme with tentative roadmap, removed old todo.md</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/32">#32</a> Fix a bug I introduced that would make toxcore fail to initialise a second time</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/31">#31</a> 7. Travis envs</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/30">#30</a> 2. Hstox test</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/29">#29</a> 1. Move toxcore travis build scripts out of .travis.yml.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/27">#27</a> 8. Stateless</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/26">#26</a> 6. Cmake bootstrapd</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/25">#25</a> 5. Coverage clang</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/24">#24</a> Silence/fix some compiler warnings.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/23">#23</a> 4. Cmake</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/20">#20</a> 3. Travis astyle</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/13">#13</a> Enable, and report test status</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/12">#12</a> Fix readme for TokTok</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/11">#11</a> Documentation: SysVInit workaround for &lt;1024 ports</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/2">#2</a> Enable toxcore logging when building on Travis.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/pull/1">#1</a> Apidsl fixes and start tracking test coverage</li>
+</ul>
+
+<h4 id="closed-issues-13">Closed issues:</h4>
+
+<ul>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/158">#158</a> Error while build with OpenCV 3.1</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/147">#147</a> Add comment to m_delfriend about the NULL passing to the internal conn status cb</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/136">#136</a> Replace astyle by clang-format</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/113">#113</a> Toxcore tests fail</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/83">#83</a> Travis tests are hard to quickly parse from their output.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/22">#22</a> Make the current tests exercise both ipv4 and ipv6.</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/9">#9</a> Fix the failing test</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/8">#8</a> Toxcore should make more liberal use of assertions</li>
+  <li><a href="https://github.com/TokTok/c-toxcore/issues/4">#4</a> Integrate hstox tests with toxcore Travis build</li>
+</ul>
+
+      </main>
+    </div>
+    
+    
+    
+  </body>
+</html>
